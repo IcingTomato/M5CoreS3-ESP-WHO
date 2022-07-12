@@ -1,3 +1,20 @@
+# M5 CoreS3 ESP-WHO demo
+
+```shell
+cd ~
+mkdir esp && cd esp
+git clone --recursive https://github.com/espressif/esp-idf.git
+cd esp-idf; git checkout release/v4.4; git submodule init; git submodule update --init --recursive;
+./install.sh
+cd ..
+git clone --recursive https://github.com/IcingTomato/M5CoreS3-ESP-WHO.git
+cd M5CoreS3-ESP-WHO/examples/human_face_detection/lcd/
+export ESPPORT=/dev/ttyACM0 (or /dev/cu.SLAB_USBtoUART on macOS or COMxx on MinGW)
+export IDF_PATH=/path/to/esp-idf
+. $IDF_PATH/export.sh
+idf.py flash
+```
+
 # ESP-WHO [[English]](./README.md)
 
 ESP-WHO 是基于乐鑫芯片的图像处理开发平台，其中包含了实际应用中可能出现的开发示例。
