@@ -1,5 +1,7 @@
 #include "who_camera.h"
 #include "who_human_face_detection.hpp"
+// #include "who_cat_face_detection.hpp"
+// #include "who_trace.h" //for cat face
 #include "who_lcd.h"
 #include "aw9523.h"
 
@@ -53,6 +55,7 @@ extern "C" void app_main()
 
     register_camera(PIXFORMAT_RGB565, FRAMESIZE_240X240, 2, xQueueAIFrame);
     register_human_face_detection(xQueueAIFrame, NULL, NULL, xQueueLCDFrame, false);
+    //register_cat_face_detection(xQueueAIFrame, NULL, NULL, xQueueLCDFrame, false);
     register_lcd(xQueueLCDFrame, NULL, true);
 }
 
