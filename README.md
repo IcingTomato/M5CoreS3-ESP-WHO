@@ -12,6 +12,7 @@ cd M5CoreS3-ESP-WHO/examples/human_face_detection/lcd/
 export ESPPORT=/dev/ttyACM0 (or /dev/cu.SLAB_USBtoUART on macOS or COMxx on MinGW)
 export IDF_PATH=/path/to/esp-idf
 . $IDF_PATH/export.sh
+idf.py set-target esp32s3
 idf.py flash
 ```
 
