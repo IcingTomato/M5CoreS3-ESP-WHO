@@ -4,13 +4,13 @@
 #include "esp_log.h"
 #include "screen_driver.h"
 
-#define BOARD_LCD_MOSI 47
-#define BOARD_LCD_MISO -1
-#define BOARD_LCD_SCK 21
-#define BOARD_LCD_CS 44
-#define BOARD_LCD_DC 43
+#define BOARD_LCD_MOSI 11
+#define BOARD_LCD_MISO 12
+#define BOARD_LCD_SCK 13
+#define BOARD_LCD_CS 36
+#define BOARD_LCD_DC 3
 #define BOARD_LCD_RST -1
-#define BOARD_LCD_BL 48
+#define BOARD_LCD_BL -1
 #define BOARD_LCD_PIXEL_CLOCK_HZ (40 * 1000 * 1000)
 #define BOARD_LCD_BK_LIGHT_ON_LEVEL 0
 #define BOARD_LCD_BK_LIGHT_OFF_LEVEL !BOARD_LCD_BK_LIGHT_ON_LEVEL

@@ -191,6 +191,7 @@ esp_err_t lcd_ili9341_get_info(scr_info_t *info)
     info->name = LCD_NAME;
     info->color_type = SCR_COLOR_TYPE_RGB565;
     info->bpp = LCD_BPP;
+    lcd_ili9341_set_invert(true);
     return ESP_OK;
 }
 
