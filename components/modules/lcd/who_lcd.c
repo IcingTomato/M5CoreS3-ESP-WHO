@@ -116,6 +116,8 @@ void app_lcd_draw_wallpaper()
     memcpy(pixels, logo_en_240x240_lcd, (logo_en_240x240_lcd_width * logo_en_240x240_lcd_height) * sizeof(uint16_t));
     g_lcd.draw_bitmap(0, 0, logo_en_240x240_lcd_width, logo_en_240x240_lcd_height, (uint16_t *)pixels);
     heap_caps_free(pixels);
+
+    vTaskDelay(3000 / portTICK_RATE_MS);
 }
 
 void app_lcd_set_color(int color)
